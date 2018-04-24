@@ -22,6 +22,8 @@ public class Member {
 	@JoinColumn(name = "TEAM_ID", insertable = false, updatable = false) // 읽기만 가능하게(insert = X, Update = X)
 	private Team team;
 
+	//하지만 굳이 일대다 양방향을 사용하는 것보다는, 다대일 양방향을 사용하는 것이 좋다.
+	
 	public Long getId() {
 		return id;
 	}
